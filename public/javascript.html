@@ -53,8 +53,8 @@
 
       async function fetchStudents() {
         try {
-          const { data } = await axios.get("/api/students");
-          showStudents(data);
+          const data = await axios.get("/api/students");
+          showStudents(data.data);
         } catch (error) {
           resultDiv.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`;
         }
